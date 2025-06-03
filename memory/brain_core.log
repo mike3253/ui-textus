@@ -1,0 +1,508 @@
+2025-06-02 16:58:59,899 - BrainCore - INFO - Long-term memory file not found. Starting with empty memory.
+2025-06-02 16:58:59,899 - BrainCore - INFO - H0.4: Processing raw input: 'What is the capital of France?' via T2 parser.
+2025-06-02 16:58:59,899 - BrainCore - DEBUG - T2.2: Pre-processed input: 'What is the capital of France?'
+2025-06-02 16:58:59,900 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_question'.
+2025-06-02 16:58:59,900 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general_query' with concept 'wh_question'
+2025-06-02 16:58:59,900 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general_query'.
+2025-06-02 16:58:59,900 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 16:58:59,900 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 1)
+2025-06-02 16:58:59,900 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [a2e7951617cc8b66541e2fab5b007e5216a765dbb44d8739ea0fc550af1f8e36] for new LTM entry.
+2025-06-02 16:58:59,901 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: a2e7951617cc8b66541e2fab5b007e5216a765dbb44d8739ea0fc550af1f8e36
+2025-06-02 16:58:59,901 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 16:58:59,901 - BrainCore - INFO - H0.4: Processing raw input: 'Calculate: 5 + 3 * (10 / 2)' via T2 parser.
+2025-06-02 16:58:59,902 - BrainCore - DEBUG - T2.2: Pre-processed input: 'Calculate: 5 + 3 * (10 / 2)'
+2025-06-02 16:58:59,902 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_colon_separated'.
+2025-06-02 16:58:59,902 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'calculate' with concept '5 + 3 * (10 / 2)'
+2025-06-02 16:58:59,902 - Dispatcher - WARNING - Dispatcher: No specific interpreter registered for domain 'calculate'.
+2025-06-02 16:58:59,902 - BrainCore - WARNING - H0.6: Interpretation failed for snippet: {'domain': 'calculate', 'concept_id': '5 + 3 * (10 / 2)', 'payload': {'text': ''}}. Result: {'status': 'dispatch_error', 'domain': 'calculate', 'concept': '5 + 3 * (10 / 2)', 'message': "No interpreter found or registered for domain 'calculate'.", 'original_payload': {'text': ''}, 'context': {'source_app': 'main_test_loop', 'test_id': 'input_2'}}
+2025-06-02 16:58:59,902 - BrainCore - INFO - H0.4: Processing raw input: 'science:topic=photosynthesis' via T2 parser.
+2025-06-02 16:58:59,902 - BrainCore - DEBUG - T2.2: Pre-processed input: 'science:topic=photosynthesis'
+2025-06-02 16:58:59,903 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_colon_separated'.
+2025-06-02 16:58:59,903 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'science' with concept 'topic=photosynthesis'
+2025-06-02 16:58:59,903 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'science'.
+2025-06-02 16:58:59,903 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_science_ai, Domain: science
+2025-06-02 16:58:59,903 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 2)
+2025-06-02 16:58:59,903 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [7855acb388695ab75f4586c5655ec9e6ae6d1212cdb0fe0e21c3b7cf709f09b3] for new LTM entry.
+2025-06-02 16:58:59,903 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 7855acb388695ab75f4586c5655ec9e6ae6d1212cdb0fe0e21c3b7cf709f09b3
+2025-06-02 16:58:59,904 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 16:58:59,904 - BrainCore - INFO - H0.4: Processing raw input: 'engineering:design=bridge_structure_A1' via T2 parser.
+2025-06-02 16:58:59,904 - BrainCore - DEBUG - T2.2: Pre-processed input: 'engineering:design=bridge_structure_A1'
+2025-06-02 16:58:59,904 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_colon_separated'.
+2025-06-02 16:58:59,904 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'engineering' with concept 'design=bridge_structure_a1'
+2025-06-02 16:58:59,905 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'engineering'.
+2025-06-02 16:58:59,905 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_engineering_ai, Domain: engineering
+2025-06-02 16:58:59,905 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 3)
+2025-06-02 16:58:59,905 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [cfd4ea18b493077abdabf5465b0affca9912b2ebcd03a0b152bfb7118934d819] for new LTM entry.
+2025-06-02 16:58:59,905 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: cfd4ea18b493077abdabf5465b0affca9912b2ebcd03a0b152bfb7118934d819
+2025-06-02 16:58:59,906 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 16:58:59,906 - BrainCore - INFO - H0.4: Processing raw input: 'Tell me about quantum entanglement.' via T2 parser.
+2025-06-02 16:58:59,906 - BrainCore - DEBUG - T2.2: Pre-processed input: 'Tell me about quantum entanglement.'
+2025-06-02 16:58:59,906 - BrainCore - DEBUG - T2.4: Short-term memory available. Future parsing could use context.
+2025-06-02 16:58:59,906 - BrainCore - WARNING - T2.5: No specific parser matched input. Defaulting to unstructured text for: 'Tell me about quantum entanglement.'
+2025-06-02 16:58:59,906 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'unstructured_text'
+2025-06-02 16:58:59,907 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 16:58:59,907 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 16:58:59,907 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 4)
+2025-06-02 16:58:59,907 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [53d3a699abd2952af5ce0653cf8440cbfd8eed5edff62b26939d58f59d2d78aa] for new LTM entry.
+2025-06-02 16:58:59,907 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 53d3a699abd2952af5ce0653cf8440cbfd8eed5edff62b26939d58f59d2d78aa
+2025-06-02 16:58:59,908 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 16:58:59,908 - BrainCore - INFO - H0.4: Processing raw input: 'math:equation=x^2 + y^2 = r^2' via T2 parser.
+2025-06-02 16:58:59,908 - BrainCore - DEBUG - T2.2: Pre-processed input: 'math:equation=x^2 + y^2 = r^2'
+2025-06-02 16:58:59,908 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_colon_separated'.
+2025-06-02 16:58:59,908 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'equation=x^2 + y^2 = r^2'
+2025-06-02 16:58:59,908 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 16:58:59,909 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 16:58:59,909 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 5)
+2025-06-02 16:58:59,909 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [86152e4c8409e38854ac5c728710aac601c873d75e06ef6f193fc8c8f23e62e5] for new LTM entry.
+2025-06-02 16:58:59,909 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 86152e4c8409e38854ac5c728710aac601c873d75e06ef6f193fc8c8f23e62e5
+2025-06-02 16:58:59,910 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 16:58:59,910 - BrainCore - INFO - H0.4: Processing raw input: 'Why is the sky blue?' via T2 parser.
+2025-06-02 16:58:59,910 - BrainCore - DEBUG - T2.2: Pre-processed input: 'Why is the sky blue?'
+2025-06-02 16:58:59,910 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_question'.
+2025-06-02 16:58:59,910 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general_query' with concept 'wh_question'
+2025-06-02 16:58:59,911 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general_query'.
+2025-06-02 16:58:59,911 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 16:58:59,911 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 6)
+2025-06-02 16:58:59,911 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [66b2016fea9b27d93c9ca64847c29a3bb88665d2dd42fb9d3a693022365c3a92] for new LTM entry.
+2025-06-02 16:58:59,911 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 66b2016fea9b27d93c9ca64847c29a3bb88665d2dd42fb9d3a693022365c3a92
+2025-06-02 16:58:59,912 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 16:58:59,912 - BrainCore - INFO - H0.4: Processing raw input: 'general:new_concept:The concept of 'meta-learning' involves learning to learn.' via T2 parser.
+2025-06-02 16:58:59,912 - BrainCore - DEBUG - T2.2: Pre-processed input: 'general:new_concept:The concept of 'meta-learning' involves learning to learn.'
+2025-06-02 16:58:59,912 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_colon_separated'.
+2025-06-02 16:58:59,912 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'new_concept'
+2025-06-02 16:58:59,913 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 16:58:59,913 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 16:58:59,913 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 7)
+2025-06-02 16:58:59,913 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [588f89b684d6b86422e22905dcd7ceb67f0d05aa30868da30324c127a7c95d37] for new LTM entry.
+2025-06-02 16:58:59,913 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 588f89b684d6b86422e22905dcd7ceb67f0d05aa30868da30324c127a7c95d37
+2025-06-02 16:58:59,914 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 16:58:59,914 - BrainCore - INFO - H0.4: Processing raw input: 'Just a random thought.' via T2 parser.
+2025-06-02 16:58:59,914 - BrainCore - DEBUG - T2.2: Pre-processed input: 'Just a random thought.'
+2025-06-02 16:58:59,914 - BrainCore - DEBUG - T2.4: Short-term memory available. Future parsing could use context.
+2025-06-02 16:58:59,914 - BrainCore - WARNING - T2.5: No specific parser matched input. Defaulting to unstructured text for: 'Just a random thought.'
+2025-06-02 16:58:59,915 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'unstructured_text'
+2025-06-02 16:58:59,915 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 16:58:59,915 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 16:58:59,915 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 8)
+2025-06-02 16:58:59,915 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [92207b4f6b0d8893f285a7fa709473b722c3f6c6d4a8717596a8fe244be058e8] for new LTM entry.
+2025-06-02 16:58:59,915 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 92207b4f6b0d8893f285a7fa709473b722c3f6c6d4a8717596a8fe244be058e8
+2025-06-02 16:58:59,916 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:00:43,360 - BrainCore - INFO - Loaded 8 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:00:43,361 - BrainCore - INFO - H0.4: Processing raw input: 'What is the capital of France?' via T2 parser.
+2025-06-02 17:00:43,362 - BrainCore - DEBUG - T2.2: Pre-processed input: 'What is the capital of France?'
+2025-06-02 17:00:43,362 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_question'.
+2025-06-02 17:00:43,362 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general_query' with concept 'wh_question'
+2025-06-02 17:00:43,362 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general_query'.
+2025-06-02 17:00:43,363 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 17:00:43,363 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 1)
+2025-06-02 17:00:43,363 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [a2e7951617cc8b66541e2fab5b007e5216a765dbb44d8739ea0fc550af1f8e36] for new LTM entry.
+2025-06-02 17:00:43,363 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: a2e7951617cc8b66541e2fab5b007e5216a765dbb44d8739ea0fc550af1f8e36
+2025-06-02 17:00:43,364 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:00:43,365 - BrainCore - INFO - H0.4: Processing raw input: 'Calculate: 5 + 3 * (10 / 2)' via T2 parser.
+2025-06-02 17:00:43,365 - BrainCore - DEBUG - T2.2: Pre-processed input: 'Calculate: 5 + 3 * (10 / 2)'
+2025-06-02 17:00:43,365 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_colon_separated'.
+2025-06-02 17:00:43,365 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'calculate' with concept '5 + 3 * (10 / 2)'
+2025-06-02 17:00:43,366 - Dispatcher - WARNING - Dispatcher: No specific interpreter registered for domain 'calculate'.
+2025-06-02 17:00:43,366 - BrainCore - WARNING - H0.6: Interpretation failed for snippet: {'domain': 'calculate', 'concept_id': '5 + 3 * (10 / 2)', 'payload': {'text': ''}}. Result: {'status': 'dispatch_error', 'domain': 'calculate', 'concept': '5 + 3 * (10 / 2)', 'message': "No interpreter found or registered for domain 'calculate'.", 'original_payload': {'text': ''}, 'context': {'source_app': 'main_test_loop', 'test_id': 'input_2'}}
+2025-06-02 17:00:43,366 - BrainCore - INFO - H0.4: Processing raw input: 'science:topic=photosynthesis' via T2 parser.
+2025-06-02 17:00:43,366 - BrainCore - DEBUG - T2.2: Pre-processed input: 'science:topic=photosynthesis'
+2025-06-02 17:00:43,366 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_colon_separated'.
+2025-06-02 17:00:43,366 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'science' with concept 'topic=photosynthesis'
+2025-06-02 17:00:43,366 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'science'.
+2025-06-02 17:00:43,367 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_science_ai, Domain: science
+2025-06-02 17:00:43,367 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 2)
+2025-06-02 17:00:43,367 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [7855acb388695ab75f4586c5655ec9e6ae6d1212cdb0fe0e21c3b7cf709f09b3] for new LTM entry.
+2025-06-02 17:00:43,367 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 7855acb388695ab75f4586c5655ec9e6ae6d1212cdb0fe0e21c3b7cf709f09b3
+2025-06-02 17:00:43,368 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:00:43,368 - BrainCore - INFO - H0.4: Processing raw input: 'engineering:design=bridge_structure_A1' via T2 parser.
+2025-06-02 17:00:43,368 - BrainCore - DEBUG - T2.2: Pre-processed input: 'engineering:design=bridge_structure_A1'
+2025-06-02 17:00:43,368 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_colon_separated'.
+2025-06-02 17:00:43,368 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'engineering' with concept 'design=bridge_structure_a1'
+2025-06-02 17:00:43,369 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'engineering'.
+2025-06-02 17:00:43,369 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_engineering_ai, Domain: engineering
+2025-06-02 17:00:43,369 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 3)
+2025-06-02 17:00:43,369 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [cfd4ea18b493077abdabf5465b0affca9912b2ebcd03a0b152bfb7118934d819] for new LTM entry.
+2025-06-02 17:00:43,369 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: cfd4ea18b493077abdabf5465b0affca9912b2ebcd03a0b152bfb7118934d819
+2025-06-02 17:00:43,370 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:00:43,370 - BrainCore - INFO - H0.4: Processing raw input: 'Tell me about quantum entanglement.' via T2 parser.
+2025-06-02 17:00:43,370 - BrainCore - DEBUG - T2.2: Pre-processed input: 'Tell me about quantum entanglement.'
+2025-06-02 17:00:43,370 - BrainCore - DEBUG - T2.4: Short-term memory available. Future parsing could use context.
+2025-06-02 17:00:43,371 - BrainCore - WARNING - T2.5: No specific parser matched input. Defaulting to unstructured text for: 'Tell me about quantum entanglement.'
+2025-06-02 17:00:43,371 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'unstructured_text'
+2025-06-02 17:00:43,371 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 17:00:43,371 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 17:00:43,371 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 4)
+2025-06-02 17:00:43,371 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [53d3a699abd2952af5ce0653cf8440cbfd8eed5edff62b26939d58f59d2d78aa] for new LTM entry.
+2025-06-02 17:00:43,371 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 53d3a699abd2952af5ce0653cf8440cbfd8eed5edff62b26939d58f59d2d78aa
+2025-06-02 17:00:43,372 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:00:43,372 - BrainCore - INFO - H0.4: Processing raw input: 'math:equation=x^2 + y^2 = r^2' via T2 parser.
+2025-06-02 17:00:43,373 - BrainCore - DEBUG - T2.2: Pre-processed input: 'math:equation=x^2 + y^2 = r^2'
+2025-06-02 17:00:43,373 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_colon_separated'.
+2025-06-02 17:00:43,373 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'equation=x^2 + y^2 = r^2'
+2025-06-02 17:00:43,373 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 17:00:43,373 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 17:00:43,373 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 5)
+2025-06-02 17:00:43,373 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [86152e4c8409e38854ac5c728710aac601c873d75e06ef6f193fc8c8f23e62e5] for new LTM entry.
+2025-06-02 17:00:43,374 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 86152e4c8409e38854ac5c728710aac601c873d75e06ef6f193fc8c8f23e62e5
+2025-06-02 17:00:43,374 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:00:43,375 - BrainCore - INFO - H0.4: Processing raw input: 'Why is the sky blue?' via T2 parser.
+2025-06-02 17:00:43,375 - BrainCore - DEBUG - T2.2: Pre-processed input: 'Why is the sky blue?'
+2025-06-02 17:00:43,375 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_question'.
+2025-06-02 17:00:43,375 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general_query' with concept 'wh_question'
+2025-06-02 17:00:43,375 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general_query'.
+2025-06-02 17:00:43,375 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 17:00:43,375 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 6)
+2025-06-02 17:00:43,376 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [66b2016fea9b27d93c9ca64847c29a3bb88665d2dd42fb9d3a693022365c3a92] for new LTM entry.
+2025-06-02 17:00:43,376 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 66b2016fea9b27d93c9ca64847c29a3bb88665d2dd42fb9d3a693022365c3a92
+2025-06-02 17:00:43,376 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:00:43,377 - BrainCore - INFO - H0.4: Processing raw input: 'general:new_concept:The concept of 'meta-learning' involves learning to learn.' via T2 parser.
+2025-06-02 17:00:43,377 - BrainCore - DEBUG - T2.2: Pre-processed input: 'general:new_concept:The concept of 'meta-learning' involves learning to learn.'
+2025-06-02 17:00:43,377 - BrainCore - INFO - T2.3.3: Successfully parsed input using '_parse_colon_separated'.
+2025-06-02 17:00:43,377 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'new_concept'
+2025-06-02 17:00:43,377 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 17:00:43,377 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 17:00:43,378 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 7)
+2025-06-02 17:00:43,378 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [588f89b684d6b86422e22905dcd7ceb67f0d05aa30868da30324c127a7c95d37] for new LTM entry.
+2025-06-02 17:00:43,378 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 588f89b684d6b86422e22905dcd7ceb67f0d05aa30868da30324c127a7c95d37
+2025-06-02 17:00:43,379 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:00:43,379 - BrainCore - INFO - H0.4: Processing raw input: 'Just a random thought.' via T2 parser.
+2025-06-02 17:00:43,379 - BrainCore - DEBUG - T2.2: Pre-processed input: 'Just a random thought.'
+2025-06-02 17:00:43,379 - BrainCore - DEBUG - T2.4: Short-term memory available. Future parsing could use context.
+2025-06-02 17:00:43,379 - BrainCore - WARNING - T2.5: No specific parser matched input. Defaulting to unstructured text for: 'Just a random thought.'
+2025-06-02 17:00:43,380 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'unstructured_text'
+2025-06-02 17:00:43,380 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 17:00:43,380 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 17:00:43,380 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 8)
+2025-06-02 17:00:43,380 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [92207b4f6b0d8893f285a7fa709473b722c3f6c6d4a8717596a8fe244be058e8] for new LTM entry.
+2025-06-02 17:00:43,380 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 92207b4f6b0d8893f285a7fa709473b722c3f6c6d4a8717596a8fe244be058e8
+2025-06-02 17:00:43,381 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:03:11,380 - BrainCore - INFO - Loaded 8 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:03:39,904 - BrainCore - INFO - H0.4: Processing raw input: 'what is the square root of 9' via T2 parser.
+2025-06-02 17:03:39,905 - BrainCore - DEBUG - T2.2: Pre-processed input: 'what is the square root of 9'
+2025-06-02 17:03:39,905 - BrainCore - WARNING - T2.5: No specific parser matched input. Defaulting to unstructured text for: 'what is the square root of 9'
+2025-06-02 17:03:39,905 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'unstructured_text'
+2025-06-02 17:03:39,905 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 17:03:39,905 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 17:03:39,905 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 1)
+2025-06-02 17:03:39,906 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [05cc6d7df616b534b724e9322f21e2b2a7dd1d13692927585568b0d81144627f] for new LTM entry.
+2025-06-02 17:03:39,906 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 05cc6d7df616b534b724e9322f21e2b2a7dd1d13692927585568b0d81144627f
+2025-06-02 17:03:39,910 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:03:59,000 - BrainCore - INFO - H0.4: Processing raw input: 'what are black holes' via T2 parser.
+2025-06-02 17:03:59,001 - BrainCore - DEBUG - T2.2: Pre-processed input: 'what are black holes'
+2025-06-02 17:03:59,001 - BrainCore - DEBUG - T2.4: Short-term memory available. Future parsing could use context.
+2025-06-02 17:03:59,002 - BrainCore - WARNING - T2.5: No specific parser matched input. Defaulting to unstructured text for: 'what are black holes'
+2025-06-02 17:03:59,002 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'unstructured_text'
+2025-06-02 17:03:59,002 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 17:03:59,002 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 17:03:59,003 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 2)
+2025-06-02 17:03:59,003 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [812713c7d0a4bbb763490352c175a6afc736b1c2b4a55d9b57526b9ca4555f0a] for new LTM entry.
+2025-06-02 17:03:59,003 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 812713c7d0a4bbb763490352c175a6afc736b1c2b4a55d9b57526b9ca4555f0a
+2025-06-02 17:03:59,006 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:09:45,864 - BrainCore - INFO - H0.4: Processing raw input: 'nano ~/my_ai_project_cortex/brain/brain_core.py' via T2 parser.
+2025-06-02 17:09:45,874 - BrainCore - DEBUG - T2.2: Pre-processed input: 'nano ~/my_ai_project_cortex/brain/brain_core.py'
+2025-06-02 17:09:45,874 - BrainCore - DEBUG - T2.4: Short-term memory available. Future parsing could use context.
+2025-06-02 17:09:45,874 - BrainCore - WARNING - T2.5: No specific parser matched input. Defaulting to unstructured text for: 'nano ~/my_ai_project_cortex/brain/brain_core.py'
+2025-06-02 17:09:45,875 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'unstructured_text'
+2025-06-02 17:09:45,875 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 17:09:45,875 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 17:09:45,875 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 3)
+2025-06-02 17:09:45,884 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [43846dff3edbc8da5816242083940c600b839c5bc1a769ad12acec7fcedff534] for new LTM entry.
+2025-06-02 17:09:45,885 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 43846dff3edbc8da5816242083940c600b839c5bc1a769ad12acec7fcedff534
+2025-06-02 17:09:45,889 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:51:18,041 - BrainCore - INFO - Loaded 11 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:51:18,042 - BrainCore - INFO - 
+--- Starting WordForge Interactive CLI Mode ---
+2025-06-02 17:51:18,042 - BrainCore - INFO - Type 'exit' or 'quit' to end.
+2025-06-02 17:52:15,552 - BrainCore - INFO - H0.4: Processing raw input: 'black holes' via T2 parser.
+2025-06-02 17:52:15,559 - BrainCore - INFO - H0.5: T2 parsed input to snippet: general/unstructured_text
+2025-06-02 17:52:15,559 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'unstructured_text'
+2025-06-02 17:52:15,559 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 17:52:15,560 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 17:52:15,560 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 1)
+2025-06-02 17:52:15,560 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [3a019fb829c7c7cc1c975767c3809d33fa0603fb901aa63dc7be23992c2f4eaa] for new LTM entry.
+2025-06-02 17:52:15,561 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 3a019fb829c7c7cc1c975767c3809d33fa0603fb901aa63dc7be23992c2f4eaa
+2025-06-02 17:52:15,563 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 17:55:18,239 - BrainCore - INFO - Exiting WordForge CLI.
+2025-06-02 18:23:09,561 - BrainCore - INFO - Loaded 12 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 18:23:09,561 - BrainCore - INFO - 
+--- Starting WordForge Interactive CLI Mode ---
+2025-06-02 18:23:09,562 - BrainCore - INFO - Type 'exit' or 'quit' to end.
+2025-06-02 18:23:23,072 - BrainCore - INFO - H0.4: Processing raw input: 'black hole' via T2 parser.
+2025-06-02 18:23:23,082 - BrainCore - ERROR - An unexpected error occurred in CLI: 'str' object is not callable
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/my_ai_project_cortex/brain/brain_core.py", line 331, in <module>
+    result = process_snippet(raw_input_text, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/my_ai_project_cortex/brain/brain_core.py", line 269, in process_snippet
+    structured_snippet = parse_raw_input_to_snippet(raw_input, short_term_memory)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/my_ai_project_cortex/brain/brain_core.py", line 223, in parse_raw_input_to_snippet
+    """
+TypeError: 'str' object is not callable
+2025-06-02 18:23:42,104 - BrainCore - INFO - H0.4: Processing raw input: 'what is black hole[D[D[D[D[D[D' via T2 parser.
+2025-06-02 18:23:42,105 - BrainCore - ERROR - An unexpected error occurred in CLI: 'str' object is not callable
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/my_ai_project_cortex/brain/brain_core.py", line 331, in <module>
+    result = process_snippet(raw_input_text, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/my_ai_project_cortex/brain/brain_core.py", line 269, in process_snippet
+    structured_snippet = parse_raw_input_to_snippet(raw_input, short_term_memory)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/my_ai_project_cortex/brain/brain_core.py", line 223, in parse_raw_input_to_snippet
+    """
+TypeError: 'str' object is not callable
+2025-06-02 18:23:58,184 - BrainCore - INFO - H0.4: Processing raw input: 'what is a black hole' via T2 parser.
+2025-06-02 18:23:58,187 - BrainCore - ERROR - An unexpected error occurred in CLI: 'str' object is not callable
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/my_ai_project_cortex/brain/brain_core.py", line 331, in <module>
+    result = process_snippet(raw_input_text, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/my_ai_project_cortex/brain/brain_core.py", line 269, in process_snippet
+    structured_snippet = parse_raw_input_to_snippet(raw_input, short_term_memory)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/my_ai_project_cortex/brain/brain_core.py", line 223, in parse_raw_input_to_snippet
+    """
+TypeError: 'str' object is not callable
+2025-06-02 18:24:45,079 - BrainCore - INFO - Exiting WordForge CLI.
+2025-06-02 18:24:49,191 - BrainCore - INFO - Loaded 12 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 18:24:49,191 - BrainCore - INFO - 
+--- Starting WordForge Interactive CLI Mode ---
+2025-06-02 18:24:49,191 - BrainCore - INFO - Type 'exit' or 'quit' to end.
+2025-06-02 18:27:58,507 - BrainCore - INFO - Exiting WordForge CLI.
+2025-06-02 18:48:06,398 - BrainCore - INFO - Loaded 12 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 18:48:06,399 - BrainCore - INFO - 
+--- Starting WordForge Interactive CLI Mode ---
+2025-06-02 18:48:06,399 - BrainCore - INFO - Type 'exit' or 'quit' to end.
+2025-06-02 18:50:23,544 - BrainCore - INFO - H0.4: Processing raw input: 'ecit' via T2 parser.
+2025-06-02 18:50:23,559 - BrainCore - ERROR - An unexpected error occurred in CLI: 'str' object is not callable
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/my_ai_project_cortex/brain/brain_core.py", line 331, in <module>
+    result = process_snippet(raw_input_text, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/my_ai_project_cortex/brain/brain_core.py", line 269, in process_snippet
+    structured_snippet = parse_raw_input_to_snippet(raw_input, short_term_memory)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/my_ai_project_cortex/brain/brain_core.py", line 223, in parse_raw_input_to_snippet
+    """
+TypeError: 'str' object is not callable
+2025-06-02 18:50:36,692 - BrainCore - INFO - Exiting WordForge CLI.
+2025-06-02 18:55:18,598 - BrainCore - INFO - Loaded 12 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 18:55:18,598 - BrainCore - INFO - 
+--- Starting WordForge Interactive CLI Mode ---
+2025-06-02 18:55:18,598 - BrainCore - INFO - Type 'exit' or 'quit' to end.
+2025-06-02 18:57:10,370 - BrainCore - INFO - H0.4: Processing raw input: 'black holes' via T2 parser.
+2025-06-02 18:57:10,385 - BrainCore - INFO - H0.5: T2 parsed input to snippet: science/specific_topic
+2025-06-02 18:57:10,386 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'science' with concept 'specific_topic'
+2025-06-02 18:57:10,386 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'science'.
+2025-06-02 18:57:10,386 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_science_ai, Domain: science
+2025-06-02 18:57:10,387 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 1)
+2025-06-02 18:57:10,387 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [bc48351674dad695c9fe869520290084037fe15c4f557e4fd9e87da470a3ec35] for new LTM entry.
+2025-06-02 18:57:10,388 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: bc48351674dad695c9fe869520290084037fe15c4f557e4fd9e87da470a3ec35
+2025-06-02 18:57:10,392 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 18:57:31,987 - BrainCore - INFO - H0.4: Processing raw input: 'what is the square root of 9' via T2 parser.
+2025-06-02 18:57:31,988 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 18:57:31,988 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 18:57:31,989 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 18:57:31,989 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 18:57:31,989 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 2)
+2025-06-02 18:57:31,990 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55] for new LTM entry.
+2025-06-02 18:57:31,990 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55
+2025-06-02 18:57:31,992 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 18:58:09,429 - BrainCore - INFO - H0.4: Processing raw input: 'how does a jet engin e work' via T2 parser.
+2025-06-02 18:58:09,430 - BrainCore - INFO - H0.5: T2 parsed input to snippet: engineering/general_engineering_query
+2025-06-02 18:58:09,431 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'engineering' with concept 'general_engineering_query'
+2025-06-02 18:58:09,431 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'engineering'.
+2025-06-02 18:58:09,431 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_engineering_ai, Domain: engineering
+2025-06-02 18:58:09,432 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 3)
+2025-06-02 18:58:09,432 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [23ef4b6a0845ec39b19e0f86ff1d45372f6212189778659623faa92444f837b5] for new LTM entry.
+2025-06-02 18:58:09,432 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 23ef4b6a0845ec39b19e0f86ff1d45372f6212189778659623faa92444f837b5
+2025-06-02 18:58:09,435 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 18:59:02,003 - BrainCore - INFO - H0.4: Processing raw input: 'how does a jet engine work' via T2 parser.
+2025-06-02 18:59:02,004 - BrainCore - INFO - H0.5: T2 parsed input to snippet: engineering/general_engineering_query
+2025-06-02 18:59:02,005 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'engineering' with concept 'general_engineering_query'
+2025-06-02 18:59:02,006 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'engineering'.
+2025-06-02 18:59:02,006 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_engineering_ai, Domain: engineering
+2025-06-02 18:59:02,007 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 4)
+2025-06-02 18:59:02,008 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [16f8b2a3772e6395e93f449502dd247998d6d94251d50c574e26f62cde6260e2] for new LTM entry.
+2025-06-02 18:59:02,009 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 16f8b2a3772e6395e93f449502dd247998d6d94251d50c574e26f62cde6260e2
+2025-06-02 18:59:02,015 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 19:08:49,088 - BrainCore - INFO - Exiting WordForge CLI.
+2025-06-02 19:11:08,623 - BrainCore - INFO - Loaded 16 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 19:11:08,623 - BrainCore - INFO - 
+--- Starting WordForge Interactive CLI Mode ---
+2025-06-02 19:11:08,623 - BrainCore - INFO - Type 'exit' or 'quit' to end.
+2025-06-02 19:11:41,308 - BrainCore - INFO - H0.4: Processing raw input: 'what is the square root of 9' via T2 parser.
+2025-06-02 19:11:41,318 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 19:11:41,319 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 19:11:41,319 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 19:11:41,319 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 19:11:41,319 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 1)
+2025-06-02 19:11:41,320 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55] for new LTM entry.
+2025-06-02 19:11:41,320 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55
+2025-06-02 19:11:41,323 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 19:12:40,290 - BrainCore - INFO - H0.4: Processing raw input: 'calculate 10 + 5' via T2 parser.
+2025-06-02 19:12:40,291 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 19:12:40,292 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 19:12:40,292 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 19:12:40,292 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 19:12:40,292 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 2)
+2025-06-02 19:12:40,293 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [8adfc61d00120384decb569fc88a051f55fef0d44e1d2283b518bce6de460deb] for new LTM entry.
+2025-06-02 19:12:40,293 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 8adfc61d00120384decb569fc88a051f55fef0d44e1d2283b518bce6de460deb
+2025-06-02 19:12:40,296 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 19:12:50,693 - BrainCore - INFO - H0.4: Processing raw input: 'add 15 and 25' via T2 parser.
+2025-06-02 19:12:50,694 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/add_numbers
+2025-06-02 19:12:50,694 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'add_numbers'
+2025-06-02 19:12:50,694 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 19:12:50,695 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 19:12:50,695 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 3)
+2025-06-02 19:12:50,695 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [a6b63f1e663e1921b3d6dea1c6813e3b41b8c266e463a29d7512f3015f5d252a] for new LTM entry.
+2025-06-02 19:12:50,696 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: a6b63f1e663e1921b3d6dea1c6813e3b41b8c266e463a29d7512f3015f5d252a
+2025-06-02 19:12:50,698 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 19:13:24,690 - BrainCore - INFO - H0.4: Processing raw input: 'solve 7 * 8' via T2 parser.
+2025-06-02 19:13:24,691 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 19:13:24,692 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 19:13:24,692 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 19:13:24,692 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 19:13:24,692 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 4)
+2025-06-02 19:13:24,693 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [450fa112e2b52d81832d1630e549b688bbcc624af3f886b0a23c1bcd579351dc] for new LTM entry.
+2025-06-02 19:13:24,693 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 450fa112e2b52d81832d1630e549b688bbcc624af3f886b0a23c1bcd579351dc
+2025-06-02 19:13:24,696 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 19:13:39,842 - BrainCore - INFO - H0.4: Processing raw input: 'what is 100 / 4' via T2 parser.
+2025-06-02 19:13:39,842 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 19:13:39,843 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 19:13:39,843 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 19:13:39,843 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 19:13:39,844 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 5)
+2025-06-02 19:13:39,844 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [a0b6a86a3292d21894924699bd1b6b91e504fa23070eb40cf2640f2b1fe04812] for new LTM entry.
+2025-06-02 19:13:39,844 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: a0b6a86a3292d21894924699bd1b6b91e504fa23070eb40cf2640f2b1fe04812
+2025-06-02 19:13:39,847 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 19:19:34,557 - BrainCore - INFO - Exiting WordForge CLI.
+2025-06-02 19:29:10,037 - BrainCore - INFO - Loaded 20 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 19:29:10,038 - BrainCore - INFO - 
+--- Starting WordForge Interactive CLI Mode ---
+2025-06-02 19:29:10,038 - BrainCore - INFO - Type 'exit' or 'quit' to end.
+2025-06-02 19:29:27,750 - BrainCore - INFO - H0.4: Processing raw input: 'what is the square root of 9' via T2 parser.
+2025-06-02 19:29:27,760 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 19:29:27,760 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 19:29:27,761 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 19:29:27,761 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 19:29:27,761 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 1)
+2025-06-02 19:29:27,762 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55] for new LTM entry.
+2025-06-02 19:29:27,762 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55
+2025-06-02 19:29:27,765 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 19:30:56,498 - BrainCore - INFO - Exiting WordForge CLI.
+2025-06-02 19:35:03,898 - BrainCore - INFO - Loaded 20 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 19:35:03,899 - BrainCore - INFO - 
+--- Starting WordForge Interactive CLI Mode ---
+2025-06-02 19:35:03,899 - BrainCore - INFO - Type 'exit' or 'quit' to end.
+2025-06-02 19:35:22,202 - BrainCore - INFO - H0.4: Processing raw input: 'ejat is the square root of 9' via T2 parser.
+2025-06-02 19:35:22,212 - BrainCore - INFO - H0.5: T2 parsed input to snippet: general/unstructured_text
+2025-06-02 19:35:22,213 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'unstructured_text'
+2025-06-02 19:35:22,213 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 19:35:22,213 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 19:35:22,214 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 1)
+2025-06-02 19:35:22,214 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [ceff3c746ce68ae5d3fd0b40648f59d0a89f85d1dbc40beca58609828a1cd2a7] for new LTM entry.
+2025-06-02 19:35:22,214 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: ceff3c746ce68ae5d3fd0b40648f59d0a89f85d1dbc40beca58609828a1cd2a7
+2025-06-02 19:35:22,218 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 19:36:29,080 - BrainCore - INFO - H0.4: Processing raw input: 'what is the square root of 9' via T2 parser.
+2025-06-02 19:36:29,084 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 19:36:29,085 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 19:36:29,085 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 19:36:29,085 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 19:36:29,086 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 2)
+2025-06-02 19:36:29,086 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55] for new LTM entry.
+2025-06-02 19:36:29,086 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55
+2025-06-02 19:36:29,090 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:12:44,971 - BrainCore - INFO - Exiting WordForge CLI.
+2025-06-02 22:20:24,833 - BrainCore - INFO - Loaded 21 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:20:24,834 - BrainCore - INFO - 
+--- Starting WordForge Interactive CLI Mode ---
+2025-06-02 22:20:24,834 - BrainCore - INFO - Type 'exit' or 'quit' to end.
+2025-06-02 22:20:50,610 - BrainCore - INFO - H0.4: Processing raw input: 'what is the square root of 9' via T2 parser.
+2025-06-02 22:20:50,620 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 22:20:50,621 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 22:20:50,621 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 22:20:50,621 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 22:20:50,621 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 1)
+2025-06-02 22:20:50,622 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55] for new LTM entry.
+2025-06-02 22:20:50,622 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55
+2025-06-02 22:20:50,626 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:21:20,655 - BrainCore - INFO - H0.4: Processing raw input: 'calculate 10 + 5' via T2 parser.
+2025-06-02 22:21:20,656 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 22:21:20,656 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 22:21:20,656 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 22:21:20,656 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 22:21:20,657 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 2)
+2025-06-02 22:21:20,657 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [8adfc61d00120384decb569fc88a051f55fef0d44e1d2283b518bce6de460deb] for new LTM entry.
+2025-06-02 22:21:20,658 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 8adfc61d00120384decb569fc88a051f55fef0d44e1d2283b518bce6de460deb
+2025-06-02 22:21:20,661 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:21:42,500 - BrainCore - INFO - H0.4: Processing raw input: 'add 15 abd 25' via T2 parser.
+2025-06-02 22:21:42,501 - BrainCore - INFO - H0.5: T2 parsed input to snippet: general/unstructured_text
+2025-06-02 22:21:42,501 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'unstructured_text'
+2025-06-02 22:21:42,501 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 22:21:42,502 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 22:21:42,502 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 3)
+2025-06-02 22:21:42,502 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [57b1b30405df08d77dca069b9de1d04f81949c15e84f08afe6e8a1a6c4f5cda8] for new LTM entry.
+2025-06-02 22:21:42,503 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 57b1b30405df08d77dca069b9de1d04f81949c15e84f08afe6e8a1a6c4f5cda8
+2025-06-02 22:21:42,506 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:22:03,475 - BrainCore - INFO - H0.4: Processing raw input: 'solve 7 * 8' via T2 parser.
+2025-06-02 22:22:03,476 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 22:22:03,476 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 22:22:03,476 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 22:22:03,477 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 22:22:03,477 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 4)
+2025-06-02 22:22:03,477 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [450fa112e2b52d81832d1630e549b688bbcc624af3f886b0a23c1bcd579351dc] for new LTM entry.
+2025-06-02 22:22:03,478 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 450fa112e2b52d81832d1630e549b688bbcc624af3f886b0a23c1bcd579351dc
+2025-06-02 22:22:03,481 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:22:19,747 - BrainCore - INFO - H0.4: Processing raw input: 'what os 100 / 4' via T2 parser.
+2025-06-02 22:22:19,749 - BrainCore - INFO - H0.5: T2 parsed input to snippet: general/unstructured_text
+2025-06-02 22:22:19,751 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'general' with concept 'unstructured_text'
+2025-06-02 22:22:19,752 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'general'.
+2025-06-02 22:22:19,753 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_general_ai, Domain: general
+2025-06-02 22:22:19,753 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 5)
+2025-06-02 22:22:19,755 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [880a19e1d928fc95ac555757be673f198c3da4a0c491eb9bf2efb9f8c557d913] for new LTM entry.
+2025-06-02 22:22:19,756 - BrainCore - INFO - H4.3: Added new LTM entry with semantic ID: 880a19e1d928fc95ac555757be673f198c3da4a0c491eb9bf2efb9f8c557d913
+2025-06-02 22:22:19,763 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:25:34,287 - BrainCore - INFO - Exiting WordForge CLI.
+2025-06-02 22:32:39,651 - BrainCore - INFO - Loaded 23 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:32:39,652 - BrainCore - INFO - 
+--- Starting WordForge Interactive CLI Mode ---
+2025-06-02 22:32:39,652 - BrainCore - INFO - Type 'exit' or 'quit' to end.
+2025-06-02 22:33:09,113 - BrainCore - INFO - H0.4: Processing raw input: 'what is the square root of 9' via T2 parser.
+2025-06-02 22:33:09,124 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 22:33:09,124 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 22:33:09,124 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 22:33:09,125 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 22:33:09,125 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 1)
+2025-06-02 22:33:09,126 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55] for new LTM entry.
+2025-06-02 22:33:09,126 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55
+2025-06-02 22:33:09,133 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:38:53,238 - BrainCore - INFO - Exiting WordForge CLI.
+2025-06-02 22:41:37,093 - BrainCore - INFO - Loaded 23 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:41:37,093 - BrainCore - INFO - 
+--- Starting WordForge Interactive CLI Mode ---
+2025-06-02 22:41:37,093 - BrainCore - INFO - Type 'exit' or 'quit' to end.
+2025-06-02 22:42:07,205 - BrainCore - INFO - H0.4: Processing raw input: 'what is the square root of 9' via T2 parser.
+2025-06-02 22:42:07,216 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 22:42:07,216 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 22:42:07,216 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 22:42:07,217 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 22:42:07,217 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 1)
+2025-06-02 22:42:07,218 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55] for new LTM entry.
+2025-06-02 22:42:07,218 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55
+2025-06-02 22:42:07,221 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:45:55,920 - BrainCore - INFO - Exiting WordForge CLI.
+2025-06-02 22:47:20,796 - BrainCore - INFO - Loaded 23 entries from long-term memory file: /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:47:20,797 - BrainCore - INFO - 
+--- Starting WordForge Interactive CLI Mode ---
+2025-06-02 22:47:20,797 - BrainCore - INFO - Type 'exit' or 'quit' to end.
+2025-06-02 22:48:05,949 - BrainCore - INFO - H0.4: Processing raw input: 'what is the square root of 9' via T2 parser.
+2025-06-02 22:48:05,959 - BrainCore - INFO - H0.5: T2 parsed input to snippet: math/general_calculation_query
+2025-06-02 22:48:05,960 - Dispatcher - INFO - Dispatcher: Received snippet for domain 'math' with concept 'general_calculation_query'
+2025-06-02 22:48:05,960 - Dispatcher - INFO - Dispatcher: Dispatching to interpreter for domain 'math'.
+2025-06-02 22:48:05,960 - BrainCore - INFO - H0.7: Successfully interpreted snippet. Status: interpreted_by_math_ai, Domain: math
+2025-06-02 22:48:05,960 - BrainCore - INFO - H2.1: Added to short-term memory (STM size: 1)
+2025-06-02 22:48:05,961 - BrainCore - INFO - H1.1: Auto-generated semantic ID: [351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55] for new LTM entry.
+2025-06-02 22:48:05,961 - BrainCore - INFO - H4.2: Updated existing LTM entry for semantic ID: 351f44bdb603650eaf58470d3111e25ca9ecd706ca7d633c39a523745f39cd55
+2025-06-02 22:48:05,965 - BrainCore - INFO - H4.4: Long-term memory saved to /data/data/com.termux/files/home/my_ai_project_cortex/brain/memory/brain_long_term_memory.json
+2025-06-02 22:53:00,637 - BrainCore - INFO - Exiting WordForge CLI.

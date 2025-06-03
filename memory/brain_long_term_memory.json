@@ -1,0 +1,59 @@
+{
+  "89beaa56b0b346181d5beda82b0c1c993ec7915bf1f9fa85f4b797c35bbca36a": {
+    "status": "interpreted_by_math_ai",
+    "domain": "math",
+    "concept": "general_calculation_query",
+    "result": "Math AI processed snippet. Error: Math AI couldn't parse the general calculation. Try 'what is X' or 'calculate Y'.",
+    "payload_received": {
+      "expression": "the square roo of 9",
+      "question": "what is the square roo of 9"
+    },
+    "context_received": {
+      "source_app": "cli_interactive",
+      "user_id": "cli_user_interactive"
+    },
+    "calculation_result": null,
+    "error": "Math AI couldn't parse the general calculation. Try 'what is X' or 'calculate Y'."
+  },
+  "adeca8e1dfe8ad295d6053c33a4617fb23431bf3982d206d1cce9ad8823bfe88": {
+    "status": "unhandled",
+    "message": "No interpreter available for domain 'unknown'.",
+    "original_snippet": {
+      "status": "fail",
+      "domain": "unknown",
+      "concept": "unknown",
+      "payload_received": {},
+      "original_input": "e it",
+      "error_message": "No matching pattern found."
+    }
+  },
+  "6821aad59fb9f56b22c8b83e77281272b1f795ea99c3a4d83b85eb4a52628c73": {
+    "status": "interpreted_by_math_ai",
+    "domain": "math",
+    "concept": "general_calculation_query",
+    "result": "Math AI processed snippet. Error: Math AI couldn't parse the general calculation. Try 'what is X' or 'calculate Y'.",
+    "payload_received": {
+      "expression": "9",
+      "question": "what is the square root of 9"
+    },
+    "context_received": {
+      "source_app": "cli_interactive",
+      "user_id": "cli_user_interactive"
+    },
+    "calculation_result": null,
+    "error": "Math AI couldn't parse the general calculation. Try 'what is X' or 'calculate Y'."
+  },
+  "304583a3ea6caba5b0ffc048125d647450bd9ddaef6f792e86c76612b389ab8c": {
+    "status": "interpreted_by_math_ai",
+    "domain": "math",
+    "concept": null,
+    "result": "Math AI processed snippet. Error: Math AI received an unhandled concept: 'None'. *This could be a point for an LLM if the NLU is too specific/generic here.*",
+    "payload_received": {},
+    "context_received": {
+      "source_app": "cli_interactive",
+      "user_id": "cli_user_interactive"
+    },
+    "calculation_result": null,
+    "error": "Math AI received an unhandled concept: 'None'. *This could be a point for an LLM if the NLU is too specific/generic here.*"
+  }
+}

@@ -1,0 +1,249 @@
+import sys #
+import json
+import os
+import logging
+import hashlib
+import threading
+import argparse
+from collections import deque
+import re # T2.3: For regular expressions for more robust parsing
+
+from typing import Dict, Any, List, Optional, Deque, Callable
+
+# --- Assuming the following imports from your project structure ---
+try:
+    # H0.1: Ensure sys.path is set correctly for package imports
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
+    if project_root not in sys.path:
+        sys.path.insert(0, project_root)
+
+    from components.interpreters import dispatcher
+    
+except ImportError as e:
+    logging.critical(f"FATAL ERROR: Core brain components missing. Error: {e}")
+    sys.exit(1)
+
+# --- Configuration Constants ---
+# H0.2: Pathing improved to be relative to the script's location
+BRAIN_MEMORY_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "memory")
+BRAIN_MEMORY_FILE = os.path.join(BRAIN_MEMORY_DIR, "brain_long_term_memory.json")
+
+# H2.0: Short-Term Memory (STM) Size Limit
+MAX_SHORT_TERM_MEMORY_SIZE = 20
+
+# --- Logging Setup ---
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(sys.stdout),
+        logging.FileHandler(os.path.join(BRAIN_MEMORY_DIR, "brain_core.log"))
+    ]
+)
+logger = logging.getLogger("BrainCore")
+logger.setLevel(logging.INFO)
+
+# --- Memory Initialization ---
+short_term_memory: Deque[Dict] = deque(maxlen=MAX_SHORT_TERM_MEMORY_SIZE)
+long_term_memory: List[Dict] = []
+
+# H4.0: Lock for thread-safe LTM writes
+ltm_lock = threading.Lock()
+
+def initialize_memory():
+    """Initializes long-term memory by loading from file."""
+    global long_term_memory
+    with ltm_lock:
+        if not os.path.exists(BRAIN_MEMORY_DIR):
+            os.makedirs(BRAIN_MEMORY_DIR, exist_ok=True)
+            logger.info(f"Created brain memory directory: {BRAIN_MEMORY_DIR}")
+
+        if os.path.exists(BRAIN_MEMORY_FILE):
+            try:
+                with open(BRAIN_MEMORY_FILE, "r") as f:
+                    long_term_memory = json.load(f)
+                logger.info(f"Loaded {len(long_term_memory)} entries from long-term memory file: {BRAIN_MEMORY_FILE}")
+            except json.JSONDecodeError as e:
+                logger.warning(f"Error decoding long-term memory JSON. Starting with empty memory. Error: {e}")
+                long_term_memory = []
+            except IOError as e:
+                logger.error(f"IOError while loading long-term memory: {e}. Starting with empty memory.", exc_info=True)
+                long_term_memory = []
+        else:
+            logger.info("Long-term memory file not found. Starting with empty memory.")
+
+# H1.0: Auto-generate semantic_id function
+def generate_semantic_id(snippet_data: Dict) -> str:
+    """
+    Generates a deterministic semantic_id for a given snippet dictionary
+    by hashing its JSON representation.
+    """
+    json_string = json.dumps(snippet_data, sort_keys=True, separators=(',', ':'))
+    return hashlib.sha256(json_string.encode('utf-8')).hexdigest()
+
+def update_long_term_memory(new_entry: Dict):
+    """
+    Updates the long-term memory with a new interpretation.
+    Saves the updated memory to the configured file.
+    
+    Args:
+        new_entry (Dict): The interpreted snippet (a dictionary) to add.
+    """
+    if not isinstance(new_entry, dict) or not new_entry:
+        logger.warning(f"H4.1: Attempted to add empty or invalid entry to LTM: {new_entry}. Skipping.")
+        return
+
+    # H1.0: Auto-generate semantic_id if missing and add to new_entry
+    if "semantic_id" not in new_entry or not new_entry["semantic_id"]:
+        auto_generated_id = generate_semantic_id(new_entry)
+        new_entry["semantic_id"] = auto_generated_id
+        logger.info(f"H1.1: Auto-generated semantic ID: [{auto_generated_id}] for new LTM entry.")
+
+    # --- Semantic Duplicate Check ---
+    new_semantic_id = new_entry["semantic_id"]
+
+    with ltm_lock:
+        existing_entry_index = -1
+        for i, entry in enumerate(long_term_memory):
+            if entry.get("semantic_id") == new_semantic_id:
+                existing_entry_index = i
+                break
+        
+        if existing_entry_index != -1:
+            long_term_memory[existing_entry_index] = new_entry 
+            logger.info(f"H4.2: Updated existing LTM entry for semantic ID: {new_semantic_id}")
+        else:
+            long_term_memory.append(new_entry)
+            logger.info(f"H4.3: Added new LTM entry with semantic ID: {new_semantic_id}")
+
+        # --- Save to File ---
+        try:
+            with open(BRAIN_MEMORY_FILE, "w") as f:
+                json.dump(long_term_memory, f, indent=2)
+            logger.info(f"H4.4: Long-term memory saved to {BRAIN_MEMORY_FILE}")
+        except IOError as e:
+            logger.error(f"H4.5: Failed to save long-term memory: {e}", exc_info=True)
+
+# =========================================================
+# T2: Natural Language Understanding (NLU) / Parsing Layer
+# (parse_raw_input_to_snippet function and helpers)
+# =========================================================
+
+# T2.3.1: Define specific parser functions for common structured patterns
+def _parse_colon_separated(text: str) -> Optional[Dict]:
+    """Parses 'domain:concept:payload_part1:payload_part2' type inputs."""
+    parts = text.split(":", 2) # Split at most twice to keep payload together
+    if len(parts) >= 2:
+        domain = parts[0].strip().lower()
+        concept = parts[1].strip().lower()
+        payload_text = parts[2].strip() if len(parts) > 2 else ""
+
+        # Further refine payload for specific domains/concepts
+        payload = {"text": payload_text}
+        if domain == "math" and "=" in payload_text:
+            payload["formula"] = payload_text
+            concept = "equation" # Override general concept if more specific is found
+        elif domain == "science" and payload_text.startswith("topic="):
+            payload["topic"] = payload_text[len("topic="):].strip()
+            concept = "scientific_topic"
+        elif domain == "engineering" and payload_text.startswith("design="):
+            payload["design_type"] = payload_text[len("design="):].strip()
+            concept = "engineering_design"
+        
+        return {"domain": domain, "concept_id": concept, "payload": payload}
+    return None
+
+def _parse_question(text: str) -> Optional[Dict]:
+    """Attempts to identify questions."""
+    if text.endswith("?"):
+        question_text = text[:-1].strip()
+        # Simple heuristic: if it starts with Wh-word
+        if re.match(r"^(what|where|when|why|who|how)\b", question_text, re.IGNORECASE):
+            return {"domain": "general_query", "concept_id": "wh_question", "payload": {"question": question_text}}
+        return {"domain": "general_query", "concept_id": "boolean_question", "payload": {"question": question_text}}
+    return None
+
+# T2.3.2: Registry of parser functions for easy extensibility
+# Order matters: more specific parsers should come before more general ones.
+PARSER_REGISTRY: List[Callable[[str], Optional[Dict]]] = [
+    _parse_colon_separated,
+    _parse_question,
+    # Add more specific parsers here as WordForge grows, e.g.,
+    # _parse_command_syntax,
+    # _parse_complex_sentence_structure,
+]
+
+# T2.0: Refined and Enhanced Raw Input to Snippet Parser
+def parse_raw_input_to_snippet(raw_input_text: str, stm_context: Optional[Deque[Dict]] = None) -> Optional[Dict]:
+    """
+    T2.0: Parses a raw input string into a structured snippet,
+    using refined rules, including natural language question recognition.
+
+    Args:
+        raw_input_text (str): The raw input string from the user.
+        stm_context (Optional[Deque[Dict]]): The Short-Term Memory context for potential
+                                               contextual understanding.
+
+    Returns:
+        Optional[Dict]: A structured dictionary snippet if parsing is successful,
+                        otherwise None.
+    """
+    logging.debug(f"T2.2: Pre-processed input: '{raw_input_text}'")
+    normalized_input = raw_input_text.strip().lower()
+
+    # T2.3: Define advanced parsing rules using regex
+    # Rules are ordered by specificity - most specific first.
+
+    parsing_rules = [
+        # T2.3.1: Explicit Domain-Concept-Payload Commands (e.g., math:calculate=10+5)
+        (re.compile(r"^(?P<domain>[a-z_]+):(?P<concept>[a-z_]+)=(?P<payload_value>.+)$"),
+         lambda m: {"domain": m.group("domain"), "concept_id": m.group("concept"), "payload": {"value": m.group("payload_value")}}),
+
+        # T2.3.2: General Mathematical Questions (e.g., "what is the square root of 9?", "calculate 5+3")
+        (re.compile(r"^(what is|calculate|solve|evaluate|how much is) (.*)$"),
+         lambda m: {"domain": "math", "concept_id": "general_calculation_query", "payload": {"question": m.group(2).strip()}}),
+        (re.compile(r"^(?P<operation>add|subtract|multiply|divide|square root|power of) (?P<numbers>.+)$"),
+         lambda m: {"domain": "math", "concept_id": m.group("operation").replace(" ", "_") + "_query", "payload": {"question": raw_input_text.strip()}}),
+
+
+        # T2.3.3: Science Questions (e.g., "what are black holes?", "explain photosynthesis")
+        (re.compile(r"^(what are|what is|explain|tell me about) (?P<topic>.+?)(?:\?|$)"),
+         lambda m: {"domain": "science", "concept_id": "general_topic_query", "payload": {"topic": m.group("topic").strip(), "question": raw_input_text.strip()}}),
+        (re.compile(r"^(science):(?P<topic>.+)$"), # Specific science tag
+         lambda m: {"domain": "science", "concept_id": "topic_query", "payload": {"topic": m.group("topic").strip(), "original_input": raw_input_text.strip()}}),
+
+        # T2.3.4: Engineering Questions (e.g., "how does a jet engine work?", "design principles of bridges")
+        (re.compile(r"^(how does|explain the design of|design principles of) (?P<topic>.+?)(?:\?|$)"),
+         lambda m: {"domain": "engineering", "concept_id": "general_engineering_query", "payload": {"topic": m.group("topic").strip(), "question": raw_input_text.strip()}}),
+        (re.compile(r"^(engineering):(?P<design_type>.+)$"), # Specific engineering tag
+         lambda m: {"domain": "engineering", "concept_id": "design_query", "payload": {"design_type": m.group("design_type").strip(), "original_input": raw_input_text.strip()}}),
+
+        # T2.3.5: General Questions (e.g., "who is the president?", "when was the battle of waterloo?")
+        (re.compile(r"^(who is|what is|when was|where is|how is|why is) (?P<question_text>.+?)(?:\?|$)"),
+         lambda m: {"domain": "general_query", "concept_id": "wh_question", "payload": {"question": raw_input_text.strip()}}),
+        (re.compile(r"^(is|are|do|does|can|will) (?P<question_text>.+?)(?:\?|$)"),
+         lambda m: {"domain": "general_query", "concept_id": "boolean_question", "payload": {"question": raw_input_text.strip()}}),
+
+
+        # T2.3.6: Contextual Understanding (using STM - future enhancement, placeholder for now)
+        # This part would get complex. For example, if the previous turn was 'science:topic=planets'
+        # and the current turn is 'tell me about mars', 'mars' could be interpreted in the 'science' context.
+        # Currently, STM is just for logging its presence.
+        (re.compile(r".*"), # Catch-all for unstructured text
+         lambda m: {"domain": "general", "concept_id": "unstructured_text", "payload": {"text": raw_input_text.strip()}})
+    ]
+
+    # T2.4: Iterate through rules and apply the first match
+    if stm_context and logging.root.level <= logging.DEBUG:
+        logging.debug(f"T2.4: Short-term memory available. Future parsing could use context: {list(stm_context)}")
+
+    for regex, snippet_builder in parsing_rules:
+        match = regex.match(normalized_input)
+        if match:
+            # T2.3.3: Log which parser matched
+            logging.debug(f"T2.3.3: Successfully parsed input using rule: '{regex.pattern}'")
+            return snippet_builder(match)
+
+    # T2.5: Fallback if no specific rule matches (this line should ideally be reached less often now)
+    logging.warning(f"T2.5: No specific parser matched input. Defaulting to unstructured text for: '{raw_input_text}'")
+    return {"domain": "general", "concept_id": "unstructured_text", "payload": {"text": raw_input_text.strip()}}
